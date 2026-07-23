@@ -74,4 +74,38 @@ public class WorkTest {
         System.out.println("1~100所有偶数的和：" + sumEven);
     }
 
+
+    @Test
+    public void test4() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("请输入成绩：");
+        int score = sc.nextInt();
+
+        // 合法性校验
+        if (score < 0 || score > 100) {
+            System.out.println("成绩输入不合法！");
+            return;
+        }
+
+        int level = score / 10;
+        switch (level) {
+            case 10:
+            case 9:
+                System.out.println("优秀");
+                break;
+            case 8:
+                System.out.println("良好");
+                break;
+            case 7:
+                System.out.println("一般");
+                break;
+            case 6:
+                System.out.println("及格");
+                break;
+            default:
+                System.out.println("不及格");
+                break;
+        }
+        sc.close();
+    }
 }
