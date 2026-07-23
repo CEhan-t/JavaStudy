@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class day3 {
+public class Day03Test {
     @Test
     // 使用System.arraycopy方法复制数组
     public void test1() {
@@ -16,7 +16,6 @@ public class day3 {
         //复制部分数组(仅复制索引1-2的元素)
         String[] part = new String[2];
         System.arraycopy(original, 1, part, 0, 2);
-        //0到2
 
         System.out.println(Arrays.toString(copy));
         //结果：[da, daa, daaa, daaaa]
@@ -65,6 +64,7 @@ public class day3 {
     }
 
     @Test
+    //二维数组
     public void test4(){
         int[][] array = new int[3][];
         array[0] = new int[2];
